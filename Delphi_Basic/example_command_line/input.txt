@@ -1,0 +1,26 @@
+Пример 3. [b] "Plasm." [/b]
+[basic]
+let mov1 = 0 
+let mov2 = 0 
+let mov4 = 0 
+
+for y = 1 to 300
+
+    let mov1 = mov1 + 9
+    let mov2 = mov1
+
+    for x = 1 to 100
+        let mov4 = mov4 + 19
+        let mov2 = mov2 + 15
+        if y > 10 
+          print [size=0 face="Arial" color = 
+                 abs(sin(3*(mov1)/255)*255+sin(2*(mov2)/255)*100-200)
+                 abs(sin(mov4/(y))*255)
+                 abs(sin(mov1/70)*sin(mov2/90))*300
+                ] "&#9608"
+        endif
+    endf
+    if y > 10 print eoln endif
+endf
+
+[/basic]
